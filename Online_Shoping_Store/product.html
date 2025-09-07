@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ShopEasy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .search-filter {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .search-filter input, .search-filter select {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px 0;
+        }
+        
+        .category-btn {
+            padding: 8px 20px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .category-btn.active, .category-btn:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 10px;
+        }
+        
+        .pagination-btn {
+            padding: 8px 15px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .pagination-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-shopping-bag"></i>
+                <span>ShopEasy</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart <span class="cart-count">0</span></a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="customer.html">My Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <div class="products-header">
+                <h1>Our Products</h1>
+                <div class="search-filter">
+                    <input type="text" placeholder="Search products...">
+                    <select>
+                        <option>Sort by: Price Low to High</option>
+                        <option>Sort by: Price High to Low</option>
+                        <option>Sort by: Name A-Z</option>
+                        <option>Sort by: Name Z-A</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="categories">
+                <button class="category-btn active">All</button>
+                <button class="category-btn">Electronics</button>
+                <button class="category-btn">Fashion</button>
+                <button class="category-btn">Home & Kitchen</button>
+                <button class="category-btn">Books</button>
+                <button class="category-btn">Sports</button>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200/667eea/ffffff?text=Smartphone" alt="Smartphone">
+                    <h3>Premium Smartphone</h3>
+                    <p class="price">$599.99</p>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200/764ba2/ffffff?text=Laptop" alt="Laptop">
+                    <h3>Ultrabook Laptop</h3>
+                    <p class="price">$1299.99</p>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200/f093fb/ffffff?text=Headphones" alt="Headphones">
+                    <h3>Wireless Headphones</h3>
+                    <p class="price">$199.99</p>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200/4facfe/ffffff?text=Smartwatch" alt="Smartwatch">
+                    <h3>Smart Watch</h3>
+                    <p class="price">$249.99</p>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200/43e97b/ffffff?text=Tablet" alt="Tablet">
+                    <h3>Tablet Pro</h3>
+                    <p class="price">$399.99</p>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200/ff6b6b/ffffff?text=Speaker" alt="Speaker">
+                    <h3>Bluetooth Speaker</h3>
+                    <p class="price">$89.99</p>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200/ffa726/ffffff?text=Camera" alt="Camera">
+                    <h3>Digital Camera</h3>
+                    <p class="price">$459.99</p>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200/ab47bc/ffffff?text=Gaming" alt="Gaming Console">
+                    <h3>Gaming Console</h3>
+                    <p class="price">$499.99</p>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <button class="pagination-btn">1</button>
+                <button class="pagination-btn active">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">Next</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>About ShopEasy</h3>
+                <p>We are committed to providing the best shopping experience with high-quality products and excellent customer service.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a> | <a href="products.html">Products</a> | <a href="cart.html">Cart</a></p>
+                <p><a href="admin.html">Admin</a> | <a href="customer.html">My Account</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 ShopEasy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
